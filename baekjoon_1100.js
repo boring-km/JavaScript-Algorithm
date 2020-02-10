@@ -9,22 +9,22 @@ rl.on('line', function (line) { // line 으로 입력값이 들어옴
     // process.stdout.write("띄어쓰지 않고 출력");
     let arr = line.split("");
     count++;
-    if (count % 2 == 0) {
-        for(let j = 0; j < 8; j++) {
+    for(let j = 0; j < 8; j++) {
+        if (count % 2 == 0) {
+
             if (j % 2 == 0) {
                 if(arr[j] == 'F'){
                     result += 1;
                 }
             }
-        }
-    } else {
-        for (let j = 0; j < 8; j++) {
+            
+        } else {
+
             if (j % 2 == 1) {
                 if (arr[j] == 'F') {
                     result += 1;
                 }
             }
-            
         }
     }
     if (count == 7) {
